@@ -10,13 +10,10 @@ const keys = require('./config/keys');
 const productRoutes = require("./api/routes/products");
 const orderRoutes = require("./api/routes/orders");
 
-//mongoose.connect('mongodb://pedihealth:pedihealth@ds123799.mlab.com:23799/pepron');
 
 
 mongoose.connect(keys.mongoURI);
-/*mongoose.connect(
-      "mongodb://pepron:" + process.env.MONGO_ATLAS_PW + "@pepron-shard-00-00-dp1hk.mongodb.net:27017,pepron-shard-00-01-dp1hk.mongodb.net:27017,pepron-shard-00-02-dp1hk.mongodb.net:27017/test?ssl=true&replicaSet=pepron-shard-0&authSource=admin"
-);*/
+
 
 mongoose.Promise = global.Promise;
 
